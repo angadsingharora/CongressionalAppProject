@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            * {
+                margin: 10;
+                padding: 10;
+            }
+            #map {
+                height: 500px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="myData"></div>
+        <script>
+            var lat1 = 0, long1 = 0
+            fetch('https://localhost:7123/AirTags')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+            function appendData(data) {
+                var mainContainer = document.getElementById("myData");
+                for (var i = 0; i < data.length; i++) {
+                    var div = document.createElement("div");
+                    div.innerHTML = 'Lat: ' + data[i].latitude + 'Long1 ' + data[i].longitude;
+                    mainContainer.appendChild(div);
+                    long1 = data[i].longitude;
+                    lat1 =  data[i].latitude;
+                    console.trace(lat1, long1)
+                }          
+            }
+
+            function initMap() {
+                var location = {lat: lat1, lng: long1}
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 4,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+            
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpx9jbothGkdHjgWuymvgGu4QctwduiHY&callback=initMap">
+        </script>
+    </body>
+</html>
+

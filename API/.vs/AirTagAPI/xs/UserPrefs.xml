@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{5F7391D9-6303-4E71-BC48-4D7221F96F72}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AirTagAPI PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirTagAPI/Program.cs">
+    <Files>
+      <File FileName="AirTagAPI/Program.cs" Line="16" Column="69" />
+      <File FileName="AirTagAPI/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="AirTagAPI/appsettings.json" Line="9" Column="152" />
+      <File FileName="AirTagAPI/Models/LongLat.cs" Line="12" Column="1" />
+      <File FileName="AirTagAPI/Controllers/AirTagsController.cs" Line="33" Column="1" />
+      <File FileName="AirTagAPI/OriginalAirtag.txt" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AirTagAPI" expanded="True">
+            <Node name="AirTagAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
