@@ -9,7 +9,7 @@ namespace AirTagAPI.Controllers
     public class AirTagsController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<LongLat> GetLongLat()
+        public IEnumerable<LongLat> GetLongLat(int? lastItemCount)
         {
             var list = new List<LongLat>();
             string[] lines = System.IO.File.ReadAllLines(@"OriginalAirtag.txt");
@@ -24,6 +24,17 @@ namespace AirTagAPI.Controllers
                     Latitude = latitude
                 });
 
+            }
+            if(lastItemCount != null && lastItemCount > 0)
+            {
+                var listArray = list.ToArray();
+                var valuesToReturn = new List<LongLat>();
+
+                for(int i = list.Count-lastItemCount.Value; i<list.Count; i++)
+                {
+                    valuesToReturn.Add(listArray[i]);
+                }
+                return valuesToReturn;
             }
             return list;
         }
