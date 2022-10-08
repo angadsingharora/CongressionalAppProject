@@ -16,8 +16,8 @@ namespace AirTagAPI.Controllers
             foreach (string line in lines)
             {
                 var longLat = line.Split(' ');
-                var longitude = Convert.ToDouble(longLat[0]);
-                var latitude = Convert.ToDouble(longLat[1]);
+                var latitude = Convert.ToDouble(longLat[0]);
+                var longitude = Convert.ToDouble(longLat[1]);
                 list.Add(new LongLat
                 {
                     Longitude = longitude,

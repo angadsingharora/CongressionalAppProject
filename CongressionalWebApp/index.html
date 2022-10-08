@@ -32,7 +32,7 @@
                 var mainContainer = document.getElementById("myData");
                 for (var i = 0; i < data.length; i++) {
                     var div = document.createElement("div");
-                    div.innerHTML = 'Lat: ' + data[i].latitude + 'Long1 ' + data[i].longitude;
+                    div.innerHTML = 'Lat: ' + data[i].latitude + '    Long: ' + data[i].longitude;
                     mainContainer.appendChild(div);
                     long1 = data[i].longitude;
                     lat1 =  data[i].latitude;
@@ -43,7 +43,7 @@
             function initMap() {
                 var location = {lat: lat1, lng: long1}
                 var map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 4,
+                    zoom: 9,
                     center: location
                 });
                 var marker = new google.maps.Marker({
